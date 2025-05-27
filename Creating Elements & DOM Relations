@@ -1,0 +1,13 @@
+// Write your code below:
+const headerDiv = document.getElementById('header');
+const subHeading = document.createElement('h3');
+subHeading.textContent = 'Buy high quality organic fruits online';
+subHeading.style.fontStyle = 'italic';
+headerDiv.appendChild(subHeading);
+
+const fruitsDiv = document.querySelector('div:nth-of-type(2)');
+const paragraph = document.createElement('p');
+paragraph.id = 'fruits-total';
+paragraph.textContent = 'Total fruits:4';
+const fruitList = document.querySelector('ul.fruits');
+fruitsDiv.insertBefore(paragraph, fruitList);
