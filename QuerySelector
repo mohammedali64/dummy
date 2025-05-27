@@ -1,0 +1,18 @@
+// Write the code as shown in the video below:
+const heading = document.querySelector('#main-heading');
+heading.style.textAlign = 'center';
+const fruits = document.querySelector('.fruits');
+fruits.style.backgroundColor = 'grey';
+fruits.style.padding = '30px';
+fruits.style.margin = '30px';
+fruits.style.width = '90%';
+fruits.style.listStyleType = 'none'
+// Write answer to the questions asked below:
+const basketHeading = document.querySelector('#basket-heading');
+basketHeading.style.color = 'brown';
+const fruit = document.querySelectorAll('.fruit');
+for (let i = 1; i < fruit.length; i+=2) {
+    fruit[i].style.backgroundColor = 'brown';
+    fruit[i].style.color = 'white';
+}
+
