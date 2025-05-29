@@ -1,0 +1,40 @@
+const form = document.querySelector('form');
+const fruits = document.querySelector('.fruits');
+const existingLis = fruits.querySelectorAll('li');
+existingLis.forEach(li => {
+  if (!li.querySelector('.edit-btn')) {
+    const editButton = document.createElement('button');
+    editButton.className = 'edit-btn';
+    editButton.textContent = 'Edit';
+    li.appendChild(editButton);
+  }
+});
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const fruitToAdd = document.getElementById('fruit-to-add');
+    const newLi = document.createElement('li');
+    const newLiText = document.createTextNode(fruitToAdd.value);
+    newLi.appendChild(newLiText);
+    newLi.className = 'fruit';
+
+    const deleteButton = document.createElement('button');
+    deleteButton.className = 'delete-btn';
+    const deleteButtonText = document.createTextNode('x');
+    deleteButton.appendChild(deleteButtonText);
+    newLi.appendChild(deleteButton);
+
+    const editButton = document.createElement('button');
+    editButton.className = 'edit-btn';
+    editButton.textContent = 'Edit';
+    newLi.appendChild(editButton);
+
+    fruits.appendChild(newLi);
+});
+
+fruits.addEventListener('click', (event) => {
+    if (event.target.classList.contains('delete-btn')) {
+        const fruitToDelete = event.target.parentElement;
+        fruits.removeChild(fruitToDelete);
+    }
+});
