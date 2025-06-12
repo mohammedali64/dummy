@@ -1,0 +1,14 @@
+export default function ExpenseItem() {
+  return (
+    <>
+      <div>
+        <p>15 August 2023</p>
+      </div>
+      <div>
+        <p>Delhi</p>
+        <p>Book</p>
+        <p>$10</p>
+      </div>
+    </>
+  )
+}
